@@ -17,12 +17,12 @@ import kodok from 'kodok';
 kodok.get(`${url}`).then((res) => {
 
     // response
-		console.log(res);
+	console.log(res);
 
-	}).catch((err) => {
-		if (err) {
-			console.log(er);
-		}
+}).catch((err) => {
+	if (err) {
+		console.log(er);
+	}
 });
 
 //POST
@@ -40,14 +40,14 @@ const header = {
 kodok.post(`${url}`, payload, header).then((res) => {
 
     // if success
-		console.log(res);
+	console.log(res);
 
-	}).catch((err) => {
+}).catch((err) => {
 
     // if error
-		if (err) {
-			console.log(er);
-		}
+	if (err) {
+		console.log(er);
+	}
 });
 ```
 
