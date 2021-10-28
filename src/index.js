@@ -1,21 +1,42 @@
-// Source : {
-// https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/
-// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-// }
+/**
+ * Kodok
+ * Author firmnardians
+ * Copyright(c) firmnardians
+ * MIT Licensed
+ */
 
-// kodok is Promise HTTP Javascript
+const { response, fetching } = require('./helper');
 
 const kodok = (function () {
 	const get = async function (url = '') {
-		const hit = await fetch(url, {
-			method: 'GET',
-		}).then((r) => r.json().then((d) => ({ status: r.status, data: d })));
+		const hit = await fetching('GET', url).then(response);
+
+		return hit;
+	};
+
+	const pos = async function (url = '', payload = {}, header = {}) {
+		const hit = await fetching('POST', url, payload, header).then(response);
+
+		return hit;
+	};
+
+	const put = async function (url = '', payload = {}, header = {}) {
+		const hit = await fetching('PUT', url, payload, header).then(response);
+
+		return hit;
+	};
+
+	const del = async function (url = '', payload = {}, header = {}) {
+		const hit = await fetching('DELETE', url, payload, header).then(response);
 
 		return hit;
 	};
 
 	return {
 		get: get,
+		post: pos,
+		put: put,
+		delete: del,
 	};
 })();
 
