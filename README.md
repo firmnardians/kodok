@@ -8,22 +8,22 @@ Kodok is promise HTTP request for Javascript. Basically the workflow uses fetch,
   npm i kodok --save
 ```
 
-## Run
+## Example
 
 ```javascript
 import kodok from 'kodok';
 
 //GET
-kodok
-	.get(`${url}`)
-	.then((res) => {
+kodok.get(`${url}`).then((res) => {
+
+    // response
 		console.log(res);
-	})
-	.catch((err) => {
+
+	}).catch((err) => {
 		if (err) {
 			console.log(er);
 		}
-	});
+});
 
 //POST
 const payload = {
@@ -37,16 +37,18 @@ const header = {
 	},
 };
 
-kodok
-	.post(`${url}`, payload, header)
-	.then((res) => {
+kodok.post(`${url}`, payload, header).then((res) => {
+
+    // if success
 		console.log(res);
-	})
-	.catch((err) => {
+
+	}).catch((err) => {
+
+    // if error
 		if (err) {
 			console.log(er);
 		}
-	});
+});
 ```
 
 ## Response
