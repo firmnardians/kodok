@@ -19,4 +19,4 @@ const kodok = (function () {
 	};
 })();
 
-export default kodok;
+module.exports = kodok;
