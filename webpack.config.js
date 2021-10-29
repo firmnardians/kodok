@@ -8,6 +8,9 @@ module.exports = (argv) => ({
 	},
 	mode: argv.mode === 'production' ? 'production' : 'development',
 	devtool: 'source-map',
+	optimization: {
+		chunkIds: 'deterministic',
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: `index.js`,

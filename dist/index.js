@@ -117,12 +117,6 @@ const kodok = (function () {
 	};
 })();
 
-kodok.get('https://jsonplaceholder.typicode.com/todos/1').then((res) => {
-	if (res.status === 200) {
-		console.log(res);
-	}
-});
-
 module.exports = kodok;
 
 

@@ -15,15 +15,13 @@ import kodok from 'kodok';
 
 //GET
 kodok.get(`${url}`).then((res) => {
-
-    // response
-	console.log(res);
-
-}).catch((err) => {
-	if (err) {
-		console.log(er);
-	}
-});
+		// response
+		console.log(res);
+	}).catch((err) => {
+		if (err) {
+			console.log(er);
+		}
+	});
 
 //POST
 const payload = {
@@ -38,17 +36,14 @@ const header = {
 };
 
 kodok.post(`${url}`, payload, header).then((res) => {
-
-    // if success
-	console.log(res);
-
-}).catch((err) => {
-
-    // if error
-	if (err) {
-		console.log(er);
-	}
-});
+		// if success
+		console.log(res);
+	}).catch((err) => {
+		// if error
+		if (err) {
+			console.log(er);
+		}
+	});
 ```
 
 ## Response
@@ -59,6 +54,15 @@ kodok.post(`${url}`, payload, header).then((res) => {
 | status     | HTTP response status code    |
 | date_time  | Date time when fetch started |
 | user_agent | Detail browser               |
+
+## Kodok Methods
+
+| Methods                            | 
+| ---------------------------------- | 
+| kodok.get(url)                     | 
+| kodok.post(url, payload, header)   | 
+| kodok.put(url, payload, header)  	 | 
+| kodok.delete(url, payload, header) | 
 
 ## Authors
 
