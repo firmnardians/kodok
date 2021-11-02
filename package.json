@@ -1,6 +1,6 @@
 {
 	"name": "kodok",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Promise HTTP Request Javascript",
 	"source": "src/index.js",
 	"main": "dist/index.js",
