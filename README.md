@@ -1,4 +1,5 @@
 # Kodok - Micro Size HTTP Request
+[Maintenance process for POST, PUT and DELETE methods]
 
 Kodok is promise HTTP request for Javascript. Basically the workflow uses fetch, but the way it works is simplified.
 
@@ -23,27 +24,7 @@ kodok.get(`${url}`).then((res) => {
 		}
 	});
 
-//POST
-const payload = {
-	data_id: 1,
-};
 
-const header = {
-	headers: {
-		'Content-Type': 'application/json',
-		Authorization: `Bearer ${token}`,
-	},
-};
-
-kodok.post(`${url}`, payload, header).then((res) => {
-		// if success
-		console.log(res);
-	}).catch((err) => {
-		// if error
-		if (err) {
-			console.log(er);
-		}
-	});
 ```
 
 ## Response
