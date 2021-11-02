@@ -20,9 +20,9 @@ export const response = (r) =>
 		},
 	}));
 
-export function fetching(type, url, payload, header) {
+export async function fetching(type, url, payload, header) {
 	if (type === 'GET') {
-		return fetch(url, {
+		return await fetch(url, {
 			method: type,
 			headers: {
 				Accept: 'application/json, text/plain, */*',
@@ -43,7 +43,7 @@ export function fetching(type, url, payload, header) {
 			dataObject.body = JSON.stringify(payload);
 		}
 
-		const res = fetch(url, dataObject);
+		const res = await fetch(url, dataObject);
 
 		return res;
 	} else {

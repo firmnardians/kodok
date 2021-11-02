@@ -1,12 +1,12 @@
 {
 	"name": "kodok",
-	"version": "0.1.8",
+	"version": "0.2.0",
 	"description": "Promise HTTP Request Javascript",
 	"source": "src/index.js",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"scripts": {
-		"build": "webpack --config webpack.config.js"
+		"build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
 	},
 	"files": [
 		"dist",
@@ -20,8 +20,9 @@
 	"license": "MIT",
 	"repository": "https://github.com/firmnardians/kodok",
 	"devDependencies": {
-		"glob": "^7.2.0",
-		"webpack": "^5.60.0",
-		"webpack-cli": "^4.9.1"
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@babel/polyfill": "^7.12.1",
+		"@babel/preset-env": "^7.15.8"
 	}
 }
