@@ -1,12 +1,13 @@
 {
 	"name": "kodok",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Promise HTTP Request Javascript",
 	"source": "src/index.js",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"scripts": {
-		"build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
+		"build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files",
+		"test": "rm -rf example/src/dist && NODE_ENV=production babel src --out-dir example/src/dist --copy-files"
 	},
 	"files": [
 		"dist",
